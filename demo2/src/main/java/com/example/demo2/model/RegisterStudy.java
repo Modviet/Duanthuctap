@@ -6,13 +6,15 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.time.LocalDate;
+
 @Entity
-@Table(name = "Permission")
+@Table(name = "Registerstudy")
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class Permission {
+public class RegisterStudy {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int Id;
@@ -22,7 +24,17 @@ public class Permission {
     private User UserId;
 
     @ManyToOne
-    @JoinColumn(name = "Id")
-    private Role RoleId;
+    @JoinColumn(name ="Id")
+    private Course CourseId;
+
+    @ManyToOne
+    @JoinColumn(name ="Id")
+    private CourseSubject CourseSubjectId;
+
+    private Boolean IsFinished;
+    private LocalDate RegisterTime;
+    private int PercentComplete;
+    private LocalDate DoneTime;
+    private Boolean IsActive;
 
 }

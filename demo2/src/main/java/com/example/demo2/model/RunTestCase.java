@@ -7,22 +7,24 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
-@Table(name = "Permission")
+@Table(name = "Runtestcase")
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class Permission {
+public class RunTestCase {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int Id;
 
     @ManyToOne
     @JoinColumn(name = "Id")
-    private User UserId;
+    private DoHomework DoHomeworkId;
 
     @ManyToOne
     @JoinColumn(name = "Id")
-    private Role RoleId;
+    private TestCase TestCaseId;
 
+    protected String Result;
+    private Double RunTime;
 }

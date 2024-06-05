@@ -6,13 +6,15 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.time.LocalDate;
+
 @Entity
-@Table(name = "Permission")
+@Table(name = "Likeblog")
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class Permission {
+public class LikeBlog {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int Id;
@@ -23,6 +25,10 @@ public class Permission {
 
     @ManyToOne
     @JoinColumn(name = "Id")
-    private Role RoleId;
+    private Blog BlogId;
 
+    private Boolean Unlike;
+
+    private LocalDate CreateTime;
+    private LocalDate UpdateTime;
 }

@@ -7,12 +7,12 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
-@Table(name = "Permission")
+@Table(name = "Leanringprogress")
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class Permission {
+public class LearningProgress {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int Id;
@@ -23,6 +23,9 @@ public class Permission {
 
     @ManyToOne
     @JoinColumn(name = "Id")
-    private Role RoleId;
+    private RegisterStudy RegisterStudyId;
 
+    @ManyToOne
+    @JoinColumn(name = "Id")
+    private Subject CurrentSubjectId;
 }

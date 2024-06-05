@@ -6,23 +6,29 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.time.LocalDate;
+
 @Entity
-@Table(name = "Permission")
+@Table(name = "Blog")
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class Permission {
+public class Blog {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int Id;
 
     @ManyToOne
     @JoinColumn(name = "Id")
-    private User UserId;
+    private User CreatorId;
 
-    @ManyToOne
-    @JoinColumn(name = "Id")
-    private Role RoleId;
+    private String Content;
+    private String Title;
+    private int NumberOfLike;
+    private int NumberOfComments;
+
+    private LocalDate CreateTime;
+    private LocalDate UpdateTime;
 
 }
