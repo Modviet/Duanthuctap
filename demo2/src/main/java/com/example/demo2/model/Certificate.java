@@ -18,7 +18,7 @@ public class Certificate {
     private int Id;
 
     @ManyToOne
-    @JoinColumn(name = "Id")
+    @JoinColumn(name = "certificateTypeId")
     private CertificateType CertificateTypeId;
 
     private String Name;

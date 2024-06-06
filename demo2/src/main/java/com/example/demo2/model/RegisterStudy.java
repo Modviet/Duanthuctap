@@ -20,15 +20,15 @@ public class RegisterStudy {
     private int Id;
 
     @ManyToOne
-    @JoinColumn(name = "Id")
+    @JoinColumn(name = "userId")
     private User UserId;
 
     @ManyToOne
-    @JoinColumn(name ="Id")
+    @JoinColumn(name ="courseId")
     private Course CourseId;
 
     @ManyToOne
-    @JoinColumn(name ="Id")
+    @JoinColumn(name ="crouseSubjectId")
     private CourseSubject CourseSubjectId;
 
     private Boolean IsFinished;

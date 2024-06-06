@@ -20,11 +20,11 @@ public class Bill {
     private int Id;
 
     @ManyToOne
-    @JoinColumn(name = "Id")
+    @JoinColumn(name = "userId")
     private User UserId;
 
     @ManyToOne
-    @JoinColumn(name = "Id")
+    @JoinColumn(name = "crouseId")
     private Course CoursId;
 
     private double Price;
@@ -34,7 +34,7 @@ public class Bill {
     private LocalDate CreateTime;
 
     @ManyToOne
-    @JoinColumn(name = "Id")
+    @JoinColumn(name = "billStatusId")
     private BillStatus BillStatusId;
 
 }

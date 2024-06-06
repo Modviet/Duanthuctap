@@ -21,11 +21,11 @@ public class TestCase {
     private String Outputl;
 
     @ManyToOne
-    @JoinColumn(name = "Id")
+    @JoinColumn(name = "programingLanguageId")
     private ProgramingLanguage ProgramingLanguageId;
 
     @ManyToOne
-    @JoinColumn(name = "Id")
+    @JoinColumn(name = "practiceId")
     private Practice PracticeId;
 
 }

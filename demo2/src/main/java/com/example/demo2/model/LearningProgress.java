@@ -18,14 +18,14 @@ public class LearningProgress {
     private int Id;
 
     @ManyToOne
-    @JoinColumn(name = "Id")
+    @JoinColumn(name = "userId")
     private User UserId;
 
     @ManyToOne
-    @JoinColumn(name = "Id")
+    @JoinColumn(name = "registerStudyId")
     private RegisterStudy RegisterStudyId;
 
     @ManyToOne
-    @JoinColumn(name = "Id")
+    @JoinColumn(name = "SubjectId")
     private Subject CurrentSubjectId;
 }

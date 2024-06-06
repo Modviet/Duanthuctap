@@ -18,11 +18,11 @@ public class CommentBlog {
    private int Id;
 
    @ManyToOne
-   @JoinColumn(name = "Id")
+   @JoinColumn(name = "blogId")
    private Blog BlogId;
 
    @ManyToOne
-   @JoinColumn(name = "Id")
+   @JoinColumn(name = "userId")
    private User UserId;
 
    private int Contebt;

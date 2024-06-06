@@ -18,11 +18,11 @@ public class RunTestCase {
     private int Id;
 
     @ManyToOne
-    @JoinColumn(name = "Id")
+    @JoinColumn(name = "DohomeworkId")
     private DoHomework DoHomeworkId;
 
     @ManyToOne
-    @JoinColumn(name = "Id")
+    @JoinColumn(name = "testCaseId")
     private TestCase TestCaseId;
 
     protected String Result;

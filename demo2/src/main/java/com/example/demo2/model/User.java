@@ -31,15 +31,15 @@ public class User {
     private String Address;
 
     @ManyToOne
-    @JoinColumn(name = "Id")
+    @JoinColumn(name = "districtId")
     private District DistrictId;
 
     @ManyToOne
-    @JoinColumn(name = "Id")
+    @JoinColumn(name = "provinceId")
     private Province ProvinceId;
 
     @ManyToOne
-    @JoinColumn(name = "Id")
+    @JoinColumn(name = "certificateId")
     private Certificate CertificateId;
 
     private String UserStatus;

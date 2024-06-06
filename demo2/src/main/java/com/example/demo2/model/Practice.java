@@ -20,7 +20,7 @@ public class Practice {
     private int Id;
 
     @ManyToOne
-    @JoinColumn(name = "Id")
+    @JoinColumn(name = "subjectDetailId")
     private SubjectDetail SubjectDetailId;
 
     private String Level;
@@ -31,7 +31,7 @@ public class Practice {
     private String ExpectOutput;
 
     @ManyToOne
-    @JoinColumn(name = "Id")
+    @JoinColumn(name = "programingLanguageId")
     private ProgramingLanguage LanguageProgramingId;
 
     private Boolean IsRequired;

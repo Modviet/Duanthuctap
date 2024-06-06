@@ -21,7 +21,7 @@ public class ConfirmEmail {
     private LocalDate ExpiryTime;
 
     @ManyToOne
-    @JoinColumn(name = "Id")
+    @JoinColumn(name = "userId")
     private User UserId;
 
     private boolean IsConfirm;

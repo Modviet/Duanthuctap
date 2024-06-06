@@ -23,7 +23,7 @@ public class Notification {
     private int Id;
 
     @ManyToOne
-    @JoinColumn(name = "Id")
+    @JoinColumn(name = "userId")
     private User UserId;
 
     private String Image;

@@ -18,7 +18,7 @@ public class Ward {
     private int Id;
 
     @ManyToOne
-    @JoinColumn(name = "Id")
+    @JoinColumn(name = "districtId")
     private District DistrictId;
 
     private String Name;

@@ -18,7 +18,7 @@ public class SubjectDetail {
     private int Id;
 
     @ManyToOne
-    @JoinColumn(name = "Id")
+    @JoinColumn(name = "subjectId")
     private Subject SubjectId;
 
     private String Name;

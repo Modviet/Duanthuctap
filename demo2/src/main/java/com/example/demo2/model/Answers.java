@@ -20,11 +20,11 @@ public class Answers {
     private int Id;
 
     @ManyToOne
-    @JoinColumn(name = "Id")
+    @JoinColumn(name = "questionId")
     private MakeQuestion QuestionId;
 
     @ManyToOne
-    @JoinColumn(name = "Id")
+    @JoinColumn(name = "userId")
     private User UserId;
 
     private String Answer;

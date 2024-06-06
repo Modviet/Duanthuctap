@@ -20,12 +20,13 @@ public class DoHomework {
     private int Id;
 
     @ManyToOne
-    @JoinColumn(name = "Id")
+    @JoinColumn(name = "praceticeId")
     private Practice PracticeId;
 
     @ManyToOne
-    @JoinColumn(name = "Id")
+    @JoinColumn(name = "userId")
     private User UserId;
+
     private enum HomeworkStatus {
         CHUA_LAM("chua lam"),
         DA_LAM("da lam"),
@@ -44,7 +45,7 @@ public class DoHomework {
     private LocalDate DoneTime;
 
     @ManyToOne
-    @JoinColumn(name = "Id")
+    @JoinColumn(name = "registerStudyId")
     private RegisterStudy RegisterStudyId;
 
 }
