@@ -26,7 +26,7 @@ public class UserController {
 
     //cap nhat
     @PutMapping(value="{/id}")
-    public ResponseEntity<User> remakeUser (@PathVariable int id, @RequestBody User userUpdate ) {
+    public ResponseEntity<User> remakeUser (@RequestBody User userUpdate ) {
         try {
             User updatedUser = userService.updateUser(userUpdate);
             return ResponseEntity.ok(updatedUser);
