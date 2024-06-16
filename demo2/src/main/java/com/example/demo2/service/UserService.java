@@ -28,6 +28,18 @@ public class UserService {
     public User updateUser(User userDetails) {
         User user = userRepo.findById(userDetails.getId())
                 .orElseThrow(() -> new RuntimeException("User not found"));
+        user.setId(userDetails.getId());
+        user.setUsername(userDetails.getUsername());
+        user.setCreateTime(userDetails.getCreateTime());
+        user.setAvatar(userDetails.getAvatar());
+        user.setFullName(userDetails.getFullName());
+        user.setDateOfBirth(userDetails.getDateOfBirth());
+        user.setAddress(userDetails.getAddress());
+        user.setEmail(userDetails.getEmail());
+        user.setPassword(userDetails.getPassword());
+        user.setCreateTime(userDetails.getCreateTime());
+        user.setIsActive(userDetails.getIsActive());
+        user.setUserStatus(userDetails.getUserStatus());
         return userRepo.save(user);
     }
 
