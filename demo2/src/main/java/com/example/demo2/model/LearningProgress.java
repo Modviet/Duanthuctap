@@ -19,7 +19,7 @@ public class LearningProgress {
 
     @ManyToOne
     @JoinColumn(name = "userId")
-    private User UserId;
+    private User user;
 
     @ManyToOne
     @JoinColumn(name = "registerStudyId")
